@@ -6,7 +6,7 @@ public class App {
 
         User user = new User();
 
-        System.out.println(user.verificarUsuario("admin", "admin"));
+        user.verificarUsuario("admin", "admin");
 
     }
 }
