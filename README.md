@@ -1,6 +1,22 @@
 # Teste de Caixa Branca - UI | UX e Testes de Software
 
-Teste de caixa branca realizado por Kauê Felippe Tiburcio (RA 247721) para a disciplina de UI | UX e Testes de Software no quarto semestre de Tecnologia em Análise e Desenvolvimento de Sistemas no Centro Universitário FACENS.
+Teste de caixa branca realizado por Kauê Felippe Tiburcio (RA 247721) para a disciplina de UI | UX e Testes de Software no quarto semestre de Tecnologia em Análise e Desenvolvimento de Sistemas no Centro Universitário FACENS.  
+
+## Overview dos arquivos e diretórios
+
+| **Arquivo/ Diretório**                       | **Descrição**                                                                                                      |
+|---------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| `/refatorado`                               | Pasta contendo o código fonte refatorado, funcionando de acordo com as melhorias realizadas.                        |
+| `/whiteBox`                                 | Pasta contendo o código fonte original proposto na atividade, antes de qualquer refatoração.                        |
+| `Diagrama ConectarBD().drawio`              | Arquivo gráfico com a notação de grafo de fluxo da função `conectarBD()`, no formato nativo da ferramenta Draw.io.           |
+| `Diagrama ConectarBD().png`                 | Imagem gerada a partir da notação de grafo de fluxo da função `conectarBD()`.                                   |
+| `Diagrama verificarUsuario().drawio`        | Arquivo gráfico com a notação de grafo de fluxo da função `verificarUsuario()`, no formato nativo da ferramenta Draw.io.      |
+| `Diagrama verificarUsuario().png`           | Imagem gerada a partir da notação de grafo de fluxo da função `verificarUsuario()`.                             |
+| `Output Refatorado`                         | Imagem auxiliar inserida na README.md, mostrando o resultado do código após refatoração.                            |
+| `PLANO DE TESTE.xlsx`                       | Planilha de teste de caixa branca estática.                        |
+| `Tabela users.png`                          | Imagem auxiliar inserida na README.md, exibindo a tabela de usuários para fins ilustrativos.                       |
+
+
 
 ## Análise de Caixa Branca Estática
 
@@ -10,7 +26,7 @@ Teste de caixa branca realizado por Kauê Felippe Tiburcio (RA 247721) para a di
 | As variáveis e constantes possuem nomenclatura? | SIM |  |  |
 | Existem legibilidade e organização no código? | SIM |  |  |
 | Todos os NullPointers foram tratados? | NÃO | Se `conectarBD()` falhar, `conn` retorna `null`. Em `verificarUsuario()`, o código chama `conn.createStatement()` sem verificar se `conn` é `null` | Inserir validação de `conn` e tratamento de exceções |
-| As conexões utilizadas foram fechadas? | NÃO | O código não fecha `Connection`, `Statement` e `ResultSet` | Usar try-with-resources para fechar `Connection`, `PreparedStatement` e `ResultSet` automaticamente. |
+| As conexões utilizadas foram fechadas? | NÃO | O código não fecha `Connection`, `Statement` e `ResultSet` | Usar try-with-resources para fechar `Connection`, `PreparedStatement` e `ResultSet` automaticamente |
 
 ## Metodologia
 
