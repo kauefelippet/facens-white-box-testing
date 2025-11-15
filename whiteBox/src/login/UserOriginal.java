@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class User {
+public class UserOriginal {
     public Connection conectarBD() {
         Connection conn = null;
         try {
@@ -13,7 +13,6 @@ public class User {
             String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
             conn = DriverManager.getConnection(url);
         } catch (Exception e) {
-            System.out.println("Erro ao conectar ao banco de dados: " + e.getMessage());
         }
         return conn;
     }
@@ -36,7 +35,6 @@ public class User {
                 nome = rs.getString("nome");
             }
         } catch (Exception e) {
-            System.out.println("Erro ao verificar usuario: " + e.getMessage());
         }
         return result;
     }

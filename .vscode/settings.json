@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "whiteBox/src",
+        ""
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
